@@ -1,12 +1,19 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "region": "Toscana",
   "fuel": {
-    "diesel_self_eur_l": 2.344,
-    "petrol_self_eur_l": 2.156,
-    "lpg_served_eur_l": 0.756
+    "diesel_self_eur_l": 2.309,
+    "petrol_self_eur_l": 2.099,
+    "lpg_served_eur_l": 0.704,
+    "methane_served_eur_kg": null
   },
   "electricity": {
     "pun_wholesale_eur_kwh": 0.21525
+  },
+  "source": {
+    "name": "MIMIT Open Data",
+    "license": "IODL 2.0",
+    "prices": "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv",
+    "stations": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
   }
 }
