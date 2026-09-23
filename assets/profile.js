@@ -1,0 +1,7 @@
+const MPE=id=>document.getElementById(id),MPN=id=>+MPE(id)?.value||0;
+const keys={km:"mp_km",province:"mp_province",urban:"mp_urban",motorway:"mp_motorway",people:"mp_people",budget:"mp_budget",charge:"mp_charge",homepct:"mp_homepct",homeprice:"mp_homeprice",publicprice:"mp_publicprice",pv:"mp_pv",house:"mp_house",storage:"mp_storage",cargo:"mp_cargo"};
+function readProfile(){const p={};for(const [k,id] of Object.entries(keys)){const e=MPE(id);p[k]=e?.type==="number"?+e.value:e?.value}p.updated=new Date().toISOString();return p}
+function fill(p){if(!p)return;for(const [k,id] of Object.entries(keys)){if(p[k]!=null&&MPE(id))MPE(id).value=p[k]}}
+function state(){let p=null;try{p=JSON.parse(localStorage.getItem("tm-profile")||"null")}catch(e){};const box=MPE("profileState");if(p){fill(p);box.innerHTML="<b>Profilo attivo</b><br>"+Number(p.km||0).toLocaleString("it-IT")+" km/anno · "+(p.province||"Toscana")+" · ricarica casa: "+(p.charge==="yes"?"sì":"no")+" · FV "+(p.pv||0)+" kWp"}else box.textContent="Nessun profilo salvato su questo dispositivo."}
+MPE("profileSave").onclick=()=>{const p=readProfile();localStorage.setItem("tm-profile",JSON.stringify(p));state();MPE("profileSave").textContent="Profilo salvato ✓";setTimeout(()=>MPE("profileSave").textContent="Salva sul dispositivo",1600)};
+MPE("profileClear").onclick=()=>{localStorage.removeItem("tm-profile");state()};state();

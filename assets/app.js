@@ -7,3 +7,5 @@ fetch("data/market.json").then(r=>r.json()).then(m=>{
  const d=document.getElementById("home_market_date"); if(d&&m.updated)d.textContent=" · "+m.updated;
 }).catch(()=>{});
 window.tmShare=async function(title,text){if(navigator.share){try{await navigator.share({title,text,url:location.href});return}catch(e){}}try{await navigator.clipboard.writeText(text+"\n"+location.href);alert("Risultato copiato.")}catch(e){}};
+
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));window.TMProfile={get(){try{return JSON.parse(localStorage.getItem("tm-profile")||"null")}catch(e){return null}},garage(){try{return JSON.parse(localStorage.getItem("tm-garage")||"[]")}catch(e){return[]}}};
