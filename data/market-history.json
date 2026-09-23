@@ -3,7 +3,9 @@
   "region": "Toscana",
   "source": {
     "name": "MIMIT Open Data",
-    "license": "IODL 2.0"
+    "license": "IODL 2.0",
+    "prices": "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv",
+    "stations": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
   },
   "observations": [
     {
