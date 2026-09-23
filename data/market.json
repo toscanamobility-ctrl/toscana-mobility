@@ -1,0 +1,12 @@
+{
+  "updated": "2026-09-22",
+  "region": "Toscana",
+  "fuel": {
+    "diesel_self_eur_l": 2.344,
+    "petrol_self_eur_l": 2.156,
+    "lpg_served_eur_l": 0.756
+  },
+  "electricity": {
+    "pun_wholesale_eur_kwh": 0.21525
+  }
+}

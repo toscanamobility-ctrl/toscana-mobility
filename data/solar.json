@@ -1,0 +1,14 @@
+{
+  "yield_kwh_per_kwp": {
+    "Pisa": 1350,
+    "Firenze": 1320,
+    "Lucca": 1320,
+    "Livorno": 1370,
+    "Prato": 1310,
+    "Pistoia": 1290,
+    "Arezzo": 1310,
+    "Siena": 1370,
+    "Grosseto": 1430,
+    "Massa-Carrara": 1280
+  }
+}
