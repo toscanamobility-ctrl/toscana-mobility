@@ -1,0 +1,64 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0b0c"><title>Passaporto Auto | Toscana Mobility</title><meta name="description" content="Crea la carta d'identità economica di un'auto: costo mensile, €/km, energia, svalutazione, viaggio, fotovoltaico e confronto con la tua auto attuale."><meta property="og:title" content="Passaporto Auto | Toscana Mobility"><meta property="og:description" content="Trasforma una scheda auto in costi reali personalizzati."><link rel="stylesheet" href="assets/style.css"><link rel="icon" href="assets/logo.webp"></head><body><div class="topline"><div class="container"><div><strong>100% online</strong> · tutta la Toscana · richieste 24/7</div><div>La mobilità, tutta qui</div></div></div><header class="header"><div class="container nav"><a class="brand" href="index.html"><img src="assets/logo.webp"><div><b>TOSCANA MOBILITY</b><span>Trova · Compra · Noleggia</span></div></a><nav class="navlinks"><a href="index.html">Home</a><a href="trova-per-me.html">Trova per me</a><a href="vendita.html">Acquista</a><a href="noleggio-veicoli.html">Noleggia</a><a href="noleggio-attrezzature.html">Mezzi da lavoro</a><a href="strumenti.html">Strumenti</a></nav><div class="nav-cta"><a class="btn btn-outline" href="contatti.html">Contatti</a><a class="btn btn-whatsapp" href="https://wa.me/393338556666">WhatsApp</a><button class="mobile-menu">☰</button></div></div></header>
+<section class="page-hero passport-hero"><div class="container"><span class="kicker">Mobility Passport</span><h1>La carta d’identità economica dell’auto.</h1><p>Non solo cavalli, chilometri e optional. Qui trasformi una vettura in ciò che conta davvero nel tuo uso: quanto costa al mese, per chilometro, su un viaggio, con il fotovoltaico e rispetto all’auto che hai già.</p><div class="hero-actions"><a class="btn btn-gold" href="#crea">Crea il passaporto</a><a class="btn btn-outline" href="confronta-auto.html">Confronta due auto</a></div></div></section>
+<section class="section" id="crea"><div class="container passport-workspace">
+<div class="passport-editor smart-card">
+  <div class="section-head"><div><span class="section-label">1 · Veicolo</span><h2>Inserisci la scheda</h2></div></div>
+  <form id="passportForm" class="form-grid">
+    <div class="field"><label>Marca</label><input id="p_make" value="Auto"></div>
+    <div class="field"><label>Modello</label><input id="p_model" value="Demo"></div>
+    <div class="field"><label>Anno</label><input id="p_year" type="number" value="2024"></div>
+    <div class="field"><label>Prezzo acquisto €</label><input id="p_price" type="number" value="35000"></div>
+    <div class="field"><label>Valore stimato a fine periodo €</label><input id="p_resale" type="number" value="18000"></div>
+    <div class="field"><label>Periodo possesso (anni)</label><input id="p_years" type="number" value="5" min="1"></div>
+    <div class="field"><label>Km annui</label><input id="p_km" type="number" value="20000"></div>
+    <div class="field"><label>Alimentazione</label><select id="p_type"><option value="diesel">Diesel</option><option value="petrol">Benzina</option><option value="lpg">GPL</option><option value="ev">Elettrica</option></select></div>
+    <div class="field"><label>Consumo L o kWh /100 km</label><input id="p_cons" type="number" step=".1" value="6"></div>
+    <div class="field"><label>Prezzo energia €/L o €/kWh</label><input id="p_energy" type="number" step=".001"></div>
+    <div class="field"><label>Assicurazione €/anno</label><input id="p_ins" type="number" value="800"></div>
+    <div class="field"><label>Bollo €/anno</label><input id="p_tax" type="number" value="350"></div>
+    <div class="field"><label>Manutenzione €/anno</label><input id="p_maint" type="number" value="600"></div>
+    <div class="field"><label>Altri costi €/anno</label><input id="p_other" type="number" value="0"></div>
+  </form>
+  <div class="passport-subsection">
+    <div><span class="section-label">2 · Casa e fotovoltaico</span><h3>Per le elettriche</h3></div>
+    <div class="form-grid">
+      <div class="field"><label>Ricarica a casa %</label><input id="p_homepct" type="number" value="85" min="0" max="100"></div>
+      <div class="field"><label>Tariffa casa €/kWh</label><input id="p_homeprice" type="number" step=".01" value=".30"></div>
+      <div class="field"><label>Tariffa pubblica €/kWh</label><input id="p_publicprice" type="number" step=".01" value=".65"></div>
+      <div class="field"><label>Quota ricariche coperta da FV %</label><input id="p_solarpct" type="number" value="35" min="0" max="100"></div>
+      <div class="field"><label>Valore energia FV €/kWh</label><input id="p_solarprice" type="number" step=".01" value="0"></div>
+      <div class="field"><label>Perdite ricarica %</label><input id="p_losses" type="number" value="10"></div>
+    </div>
+  </div>
+  <div class="passport-subsection">
+    <div><span class="section-label">3 · La tua auto di oggi</span><h3>Confronto personale</h3></div>
+    <div class="form-grid">
+      <div class="field"><label>Costo attuale carburante/energia €/mese</label><input id="p_current_energy" type="number" value="220"></div>
+      <div class="field"><label>Costi fissi attuali €/mese</label><input id="p_current_fixed" type="number" value="150"></div>
+    </div>
+  </div>
+</div>
+<aside class="passport-live">
+  <div class="passport-card premium-passport">
+    <div class="passport-brandline"><span>TOSCANA MOBILITY</span><b>MOBILITY PASSPORT</b></div>
+    <div class="passport-identity"><div><span id="card_year">2024</span><h2 id="card_name">Auto Demo</h2><p id="card_type">Diesel · 20.000 km/anno</p></div><div class="passport-stamp">TM</div></div>
+    <div class="passport-kpis">
+      <div><span>Impatto mensile</span><strong id="card_month">—</strong></div>
+      <div><span>Costo totale / km</span><strong id="card_km">—</strong></div>
+      <div><span>Energia / 100 km</span><strong id="card_100">—</strong></div>
+      <div><span>Costo totale periodo</span><strong id="card_total">—</strong></div>
+    </div>
+    <div class="passport-breakdown">
+      <div><span>Svalutazione</span><b id="card_depr">—</b></div>
+      <div><span>Carburante / energia</span><b id="card_energy">—</b></div>
+      <div><span>Assicurazione + bollo + manutenzione</span><b id="card_fixed">—</b></div>
+      <div><span>Rispetto all’auto attuale</span><b id="card_vs_current">—</b></div>
+    </div>
+    <div class="passport-note" id="card_note">Modifica i valori a sinistra: il passaporto si aggiorna in tempo reale.</div>
+  </div>
+  <div class="passport-actions"><button class="btn btn-gold" id="passportSave" type="button">Salva</button><button class="btn btn-dark" id="passportShare" type="button">Condividi</button><button class="btn btn-dark" id="passportPrint" type="button">Stampa / PDF</button></div>
+</aside>
+</div></section>
+<section class="section alt"><div class="container"><div class="section-head"><div><span class="section-label">Trip Reality</span><h2>Quanto costa proprio quel viaggio?</h2></div><p>Usa lo stesso profilo dell’auto per tradurre una distanza in euro.</p></div><div class="trip-card"><div class="trip-form"><div class="field"><label>Distanza km</label><input id="pp_tripkm" type="number" value="300"></div><div class="field"><label>Pedaggi / extra €</label><input id="pp_extra" type="number" value="0"></div><label class="check-row"><input id="pp_return" type="checkbox"> Andata e ritorno</label></div><div class="trip-result"><span>Costo stimato viaggio</span><strong id="pp_triptotal">—</strong><small id="pp_tripnote">—</small></div></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><span class="section-label">Dentro ogni futura scheda auto</span><h2>Questo diventa il livello “utile” dell’annuncio.</h2></div><p>Il motore è stato progettato per essere riutilizzato sulle future vetture pubblicate da Toscana Mobility.</p></div><div class="use-grid"><div class="use-card"><strong>Prezzo → costo totale</strong><p>Il prezzo smette di essere l’unico numero: entra la svalutazione prevista e il costo del possesso.</p></div><div class="use-card"><strong>Consumo → euro personali</strong><p>Gli stessi consumi cambiano valore in base ai tuoi chilometri e al prezzo dell’energia.</p></div><div class="use-card"><strong>Elettrica → casa + colonnina + FV</strong><p>Il costo medio di ricarica può combinare casa, pubblico e quota coperta dal fotovoltaico.</p></div><div class="use-card"><strong>Auto nuova → confronto con quella attuale</strong><p>Vedi la differenza mensile rispetto a ciò che spendi già oggi.</p></div></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html"><img src="assets/logo.webp"><div><b>TOSCANA MOBILITY</b><span>La mobilità, tutta qui.</span></div></a><p>Piattaforma digitale per trovare, acquistare o noleggiare veicoli e mezzi da lavoro in Toscana.</p></div><div><h4>Strumenti</h4><p><a href="passaporto-auto.html">Passaporto Auto</a><br><a href="mobility-reality.html">Mobility Reality</a><br><a href="confronta-auto.html">Confronta auto</a><br><a href="auto-ideale.html">Auto ideale</a><br><a href="workmatch.html">WorkMatch</a></p></div><div><h4>Contatti</h4><p><a href="tel:+393338556666">+39 333 855 6666</a><br><a href="mailto:toscanamobility@gmail.com">toscanamobility@gmail.com</a><br>Tutta la Toscana · 24/7</p></div><div><h4>Social</h4><p><a href="https://www.instagram.com/toscanamobility">Instagram</a><br><a href="https://www.facebook.com/share/1MCu77JyWb/">Facebook</a><br><a href="https://www.tiktok.com/@toscana.mobility">TikTok</a></p></div></div><div class="legal">© 2026 Toscana Mobility · Le stime sono informative e dipendono dai dati inseriti.</div></div></footer><a class="sticky-wa" href="https://wa.me/393338556666">◉</a><script src="assets/app.js"></script><script src="assets/passport.js"></script></body></html>
