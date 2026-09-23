@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Update MIMIT fuel data
+      - name: Update MIMIT fuel data and verified history
         run: python scripts/update_market_data.py
       - name: Update PVGIS weekly or manually
         run: |
@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "Toscana Mobility Data Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/market.json data/solar.json
+          git add data/market.json data/market-history.json data/solar.json
           git diff --cached --quiet || git commit -m "Update public mobility data"
           git push
       - uses: actions/configure-pages@v5
