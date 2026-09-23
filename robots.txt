@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toscanamobility-ctrl.github.io/toscana-mobility/sitemap.xml
