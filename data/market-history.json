@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "region": "Toscana",
   "source": {
     "name": "MIMIT Open Data",
@@ -10,6 +10,15 @@
   "observations": [
     {
       "date": "2026-09-23",
+      "fuel": {
+        "diesel_self_eur_l": 2.309,
+        "petrol_self_eur_l": 2.099,
+        "lpg_served_eur_l": 0.704,
+        "methane_served_eur_kg": null
+      }
+    },
+    {
+      "date": "2026-09-24",
       "fuel": {
         "diesel_self_eur_l": 2.309,
         "petrol_self_eur_l": 2.099,
