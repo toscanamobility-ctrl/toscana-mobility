@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "region": "Toscana",
   "fuel": {
-    "diesel_self_eur_l": 2.309,
+    "diesel_self_eur_l": 2.299,
     "petrol_self_eur_l": 2.099,
     "lpg_served_eur_l": 0.704,
     "methane_served_eur_kg": null
