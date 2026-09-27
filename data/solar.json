@@ -1,14 +1,16 @@
 {
+  "updated": "2026-09-27",
+  "source": "European Commission JRC PVGIS 5.3",
   "yield_kwh_per_kwp": {
-    "Pisa": 1350,
-    "Firenze": 1320,
-    "Lucca": 1320,
-    "Livorno": 1370,
-    "Prato": 1310,
-    "Pistoia": 1290,
-    "Arezzo": 1310,
-    "Siena": 1370,
-    "Grosseto": 1430,
-    "Massa-Carrara": 1280
+    "Pisa": 1409,
+    "Firenze": 1374,
+    "Lucca": 1349,
+    "Livorno": 1436,
+    "Prato": 1364,
+    "Pistoia": 1375,
+    "Arezzo": 1367,
+    "Siena": 1405,
+    "Grosseto": 1518,
+    "Massa-Carrara": 1335
   }
 }
